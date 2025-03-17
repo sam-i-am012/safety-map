@@ -32,7 +32,7 @@ const ReportForm = () => {
             }
         } else {
             alert("Please select a location on the map first.");
-       
+        }
     }; 
     console.log("selected location: ", selectedLocation);
     return (
