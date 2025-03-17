@@ -5,18 +5,17 @@ import { db, collection, onSnapshot } from "../firebase";
 
 const mapContainerStyle = {
     width: "900px", 
+    // height: "100vh", 
     height: "300px", 
 }; 
 
 const center = {lat: 32.7501, lng: -84.3885}; // default to Atlanta, GA
 
-const Map = ( { setSelectedLocation, selectedLocation }) => {
+const HeatMap = ( { setSelectedLocation, selectedLocation }) => {
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: import.meta.env.VITE_FIREBASE_API_KEY, 
+        googleMapsApiKey: "AIzaSyCSm7OGRrlywoF9YwpeILnwZiTmDolJi4M", 
         libraries: ["visualization", "places"], // places library for auto complete 
     });
-    console.log("Google Maps API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
-
 
     const [heatmapData, setHeatmapData] = useState([]); 
     // const [selectedLocation, setSelectedLocation] = useState(null); 
@@ -139,11 +138,11 @@ const Map = ( { setSelectedLocation, selectedLocation }) => {
 
                 {/* add a marker for the selected location */}
                 {selectedLocation && (
-                    <Marker position={{ lat: selectedLocation.lat, lng: selectedLocation.lng }} />
+                    <Marker position={selectedLocation} />
                 )}
             </GoogleMap>           
         </div>
     );
 };
 
-export default Map;
+export default HeatMap;
