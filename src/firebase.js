@@ -11,11 +11,10 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
-console.log("firebase Maps API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
 
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { db, collection, addDoc, onSnapshot }; asdfadsf
+export { db, collection, addDoc, onSnapshot };

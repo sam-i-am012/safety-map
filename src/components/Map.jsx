@@ -15,7 +15,6 @@ const Map = ( { setSelectedLocation, selectedLocation }) => {
         googleMapsApiKey: import.meta.env.VITE_FIREBASE_API_KEY, 
         libraries: ["visualization", "places"], // places library for auto complete 
     });
-    console.log("Google Maps API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
 
 
     const [heatmapData, setHeatmapData] = useState([]); 
