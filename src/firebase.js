@@ -3,16 +3,19 @@ import { getFirestore, collection, addDoc, onSnapshot } from "firebase/firestore
 
 // firebase config
 const firebaseConfig = {
-  apiKey: "YOUR-API-KEY",
-  authDomain: "YOUR_FIREBASE_PROJECT.firebaseapp.com",
-  projectId: "YOUR_FIREBASE_PROJECT_ID",
-  storageBucket: "YOUR_FIREBASE_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+console.log("firebase Maps API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { db, collection, addDoc, onSnapshot };
+export { db, collection, addDoc, onSnapshot }; asdfadsf

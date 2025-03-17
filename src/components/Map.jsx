@@ -139,7 +139,7 @@ const Map = ( { setSelectedLocation, selectedLocation }) => {
 
                 {/* add a marker for the selected location */}
                 {selectedLocation && (
-                    <Marker position={{ lat: selectedLocation.lat, lng: selectedLocation.lng }} />
+                   <Marker position={selectedLocation} />
                 )}
             </GoogleMap>           
         </div>
