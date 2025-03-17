@@ -49,4 +49,4 @@ dist-ssr
 *.sw?
 
 # ignore firebase.js because of API keys 
-src/firebase.js
+.env
